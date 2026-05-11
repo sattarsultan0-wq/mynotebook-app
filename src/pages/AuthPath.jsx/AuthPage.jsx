@@ -17,8 +17,8 @@ const[authPreloader, setAuthPreloader] = useState(false)
 const toggle = () => setSelect(!select)
 const navigate = useNavigate()
 
-const URL_REGISTER = "http://localhost:3000/register";
-const URL_LOGIN = "http://localhost:3000/login";
+const URL_REGISTER = "https://mnb-server.onrender.com/register";
+const URL_LOGIN = "https://mnb-server.onrender.com/login";
 
 const registerUser = () => {
   const login = registration.login

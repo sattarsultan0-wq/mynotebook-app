@@ -16,7 +16,7 @@ const Dashbord = () => {
   const toggle = () => setToggleAddNote(!toggleAddNote)
 
 
-  const URL = "http://localhost:3000/notes"
+  const URL = "https://mnb-server.onrender.com/notes"
 
   useEffect(() => {
     const USER_TOKEN = localStorage.getItem('token')

@@ -9,7 +9,7 @@ const AIChat =() => {
     const[inputPlain, setInputPlain] = useState(false)
     const[preloader,  setPreloader] = useState(true)
 
-    const URL = "http://localhost:3000/message"
+    const URL = "https://mnb-server.onrender.com/message"
 
     const userMessage = (el) => {
     setPreloader(false)
