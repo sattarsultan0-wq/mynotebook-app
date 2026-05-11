@@ -1,0 +1,17 @@
+.notes__chat {
+  position: relative;
+  flex: 1;
+   min-height: 0; /* 🔥 критично */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #FFFFFF;
+  border: 1px solid rgb(222, 222, 222);
+  border-radius: 20px;
+  overflow: hidden;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+

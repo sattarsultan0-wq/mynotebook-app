@@ -1,0 +1,24 @@
+.dashbord__allnotes__container{
+    margin-top: 30px;
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+    padding: 0px 20px 0px 10px;
+}
+
+.dashbord__allnotes__container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.dashbord__allnotes__container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dashbord__allnotes__container::-webkit-scrollbar-thumb {
+  background: #e2e2e2;
+  border-radius: 10px;
+}
+
+.dashbord__allnotes__container::-webkit-scrollbar-thumb:hover {
+  background: #a7a7a7;
+}

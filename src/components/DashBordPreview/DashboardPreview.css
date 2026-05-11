@@ -1,0 +1,77 @@
+.dashboard {
+  background: #0f0f0f;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.dashboard-title {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.dashboard-subtitle {
+  color: #a1a1aa;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* CARDS */
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid #222;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: left;
+  backdrop-filter: blur(10px);
+
+  transition: all 0.4s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: #444;
+}
+
+/* TITLES */
+.dashboard-card h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* LIST */
+.dashboard-card ul {
+  padding-left: 18px;
+  color: #ccc;
+}
+
+.dashboard-card li {
+  margin-bottom: 8px;
+}
+
+/* STATS */
+.dashboard-stat {
+  margin-bottom: 10px;
+  color: #c7c7c7;
+}
+
+/* COLOR ACCENTS */
+.tasks h3 {
+  color: #e1fd47;
+}
+
+.health h3 {
+  color: #22c55e;
+}
+
+.finance h3 {
+  color: #3b82f6;
+}

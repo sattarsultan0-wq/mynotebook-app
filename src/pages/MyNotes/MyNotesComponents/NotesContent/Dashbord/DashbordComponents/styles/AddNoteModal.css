@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+.notes__modal-onadd {
+    position: fixed; /* 🔥 ключевой фикс */
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* 🔥 вместо 100% */
+
+    background-color: rgba(34, 34, 34, 0.078);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 0.3s;
+}
+.notes__modal-onadd.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.notes__modal-onadd .modal__container{
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+
+    margin: 0 20px;
+    padding: 40px;
+    box-sizing: border-box;
+
+    
+
+    background: #2c2c2e;
+    
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.notes__modal-onadd .modal__content{
+    flex: 1;
+    width: 100%;;
+    height: 100%;
+    min-height: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: auto;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+}
+.notes__modal-onadd .modal__content .input__title{
+    display: flex;
+    gap: 10px;
+}
+.notes__modal-onadd .modal__content .input__title button{
+    padding: 0px 20px;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(322deg,rgba(82, 82, 82, 0.288) 0%, rgba(155, 155, 155, 0.274) 100%);
+}
+
+.notes__modal-onadd .modal__content .input__title button:active{
+    background: rgb(34, 34, 34);
+}
+
+.notes__modal-onadd .modal__content input{
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 20px 20px;
+    width: 100%;
+    background: #3A3A3C;
+    border: none;
+}
+
+.notes__modal-onadd .modal__content textarea{
+    flex: 1;              /* 🔥 растягивается */
+    width: 100%;
+    resize: none;
+
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 17px;
+
+    border: none;
+    outline: none;
+    background: none;
+
+    overflow-y: auto;
+}
+
+
+.notes__modal-onadd .modal__content textarea,
+.notes__modal-onadd .modal__content input {
+    color: #fff;
+}
+
+.notes__modal-onadd .modal__content textarea::placeholder,
+.notes__modal-onadd .modal__content input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.notes__modal-onadd .modal__content textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+.notes__modal-onadd .modal__content textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.notes__modal-onadd .modal__content textarea::-webkit-scrollbar-thumb {
+  background: #444343;
+  border-radius: 10px;
+}
+
+.notes__modal-onadd .modal__content textarea::-webkit-scrollbar-thumb:hover {
+  background: #a7a7a7;
+}

@@ -1,0 +1,62 @@
+.ai-demo {
+  background: #0f0f0f;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.ai-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* чат контейнер */
+.chat-box {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* сообщения */
+.msg {
+  padding: 14px 18px;
+  border-radius: 16px;
+  max-width: 80%;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* user */
+.msg.user {
+  align-self: flex-end;
+  background: linear-gradient(90deg, #7c3aed, #3b82f6);
+  color: white;
+}
+
+/* ai */
+.msg.ai {
+  align-self: flex-start;
+  text-align: start;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #222;
+  color: #d4d4d8;
+}
+
+.typing {
+  opacity: 0.9;
+}
+
+/* мигающий курсор */
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

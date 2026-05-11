@@ -1,0 +1,26 @@
+.notes__main{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #F8F9FA;
+  height: 100vh;
+}
+
+.notes__main-preloader{
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+
+  opacity: 1;
+  visibility: visible;
+
+  transition-duration: 0.3s;
+}
+.notes__main-preloader.hidden{
+  opacity: 0;
+  visibility: hidden;
+}

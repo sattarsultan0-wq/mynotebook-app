@@ -1,0 +1,74 @@
+.notes__header{
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.notes__header__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px 15px 30px;
+}
+
+.notes__header__logo{
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  gap: 10px;
+}
+
+.notes__header__logo-icon-bilayer{
+  transform: scale(2);
+  color: rgb(0, 0, 0);
+}
+.notes__header__logo-name h2{
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.notes__header__nav{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.notes__header__nav__buttons{
+  font-size: 16px;
+  padding: 7px 15px;
+  border-radius: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.notes__header__nav__button-createnots{
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  background-color: #313131;
+
+  transition-duration: 0.3s;
+}
+.notes__header__nav__button-createnots:hover{
+  background-color: #494949;
+}
+.notes__header__nav__button-settings{
+  background: linear-gradient(240deg,rgba(184, 184, 184, 0.18) 0%, rgba(255, 255, 255, 0.34) 100%);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(223, 223, 223);
+  box-shadow: 0px 0px 10px rgba(148, 148, 148, 0.304);
+}
+
+.header__userprofile-icon{
+  color: rgb(118, 118, 118);
+  transform: scale(2.5);
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}

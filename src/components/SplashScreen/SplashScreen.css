@@ -1,0 +1,42 @@
+.splash {
+  position: fixed;
+  inset: 0;
+  background: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* 🔥 ВОТ ТУТ АНИМАЦИЯ ИКОНКИ */
+.logo-icon {
+  color: white;
+  font-size: 50px;
+
+  transform-origin: center;
+  animation: zoomIcon 2s ease forwards;
+}
+
+@keyframes zoomIcon {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  60% {
+    transform: scale(2.5);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(12);
+    opacity: 0;
+  }
+}
+
+/* исчезновение splash */
+.fade {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}

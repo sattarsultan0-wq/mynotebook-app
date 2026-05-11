@@ -1,0 +1,100 @@
+.registration__loading-container{
+  position: fixed;
+  top: -120px;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
+  background-color: rgba(151, 144, 144, 0.596);
+  backdrop-filter: blur(5px);
+  border: 2px solid rgb(151, 151, 151);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 1s ease;
+}
+
+.registration__loading-container.active{
+    top: 120px;
+    opacity: 1;
+    visibility: visible;   
+}
+
+.loading-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.loading-image{
+  width: 70px;
+  height: 70px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-process{
+    position: relative;
+    width: 180px;
+    height: 24px;
+    overflow: hidden;
+
+    margin-top: 20px;
+
+    color: rgb(197, 197, 197);
+    font-size: 16px;
+}
+
+
+.loading-process span {
+    position: absolute;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+}
+
+
+.registration__loading-container.active .loading-process-1 {
+    animation: processStep 1.5s forwards;
+    animation-delay: 0.5s;
+}
+
+.registration__loading-container.active .loading-process-2 {
+    animation: processStep 1.5s forwards;
+    animation-delay: 2s;
+}
+
+.registration__loading-container.active .loading-process-3 {
+    animation: processLast 1.5s forwards;
+    animation-delay: 3.5s;
+}
+
+
+.loading-image.show {
+    animation: rotate 2s ease infinite;
+}
+
+@keyframes processStep {
+    0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+    20%, 80% { opacity: 1; transform: translateX(-50%) translateY(0); }
+    100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+}
+
+@keyframes processLast {
+    0% { opacity: 0; transform: translateX(-50%) translateY(20px); }
+    100% { opacity: 1; transform: translateX(-50%) translateY(0); }
+}

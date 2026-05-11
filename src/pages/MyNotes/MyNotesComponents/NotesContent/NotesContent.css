@@ -1,0 +1,16 @@
+/* Область контента */
+.notes__content{
+    min-height: 0;
+    flex: 1;
+}
+
+.notes__content__container{
+    display: flex;
+    flex-direction: row; /* важно */
+    gap: 20px;
+    padding: 0 30px 30px 30px;
+    height: 100%;
+    min-height: 0; /* 🔥 добавь */
+    flex: 1;
+}
+
