@@ -15,3 +15,27 @@
 }
 
 
+@media (max-width: 768px) {
+  .notes__main {
+    height: auto !important; /* Убиваем 100vh */
+    min-height: 100vh;
+    display: block; 
+  }
+
+  .notes__content,
+  .notes__content__container {
+    height: auto !important;
+    min-height: auto !important;
+    display: flex;
+    flex-direction: column;
+    flex: none !important;
+  }
+
+  .notes__chat, 
+  .notes__dashbord {
+    flex: none !important;
+    height: auto !important; /* Карточка растягивается под контент */
+    min-height: 300px;       /* Чтобы пустая карточка не схлопнулась в ноль */
+    margin-bottom: 20px;     /* Отступ между карточками в колонке */
+  }
+}
