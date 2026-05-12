@@ -9,14 +9,7 @@
 
   overflow-y: hidden;
 }
-.auth__container img{
-  position: fixed;
-  z-index: 10;
-  top: 50px;
-  left: 30px;
-  width: 40px;
-  height: 40px;
-}
+
 .auth__preloader{
   position: fixed;
   top: 0;

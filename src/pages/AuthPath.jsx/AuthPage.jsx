@@ -97,7 +97,6 @@ const authorization = () => {
 
   return (
     <div className="auth__container">
-      <img src='/loading-logo.png'/>
       <Login authorization={authorization} login={login} setLogin={setLogin} select={select} toggle={toggle} isError={isErrorAuth} setIsError={setIsErrorAuth}/>
       <Registration registerUser={registerUser} registration={registration} setRegistration={setRegistration} select={select} toggle={toggle} isError={isErrorReg} setIsError={setIsErrorReg}/>
       <RegLoading regLoading={regLoading} setRegLoading={setRegLoading} onComplete={handleLoadingComplete}/>
