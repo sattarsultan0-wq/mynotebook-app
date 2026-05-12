@@ -24,7 +24,7 @@
 
   background: rgb(255, 255, 255);
   border: 1px solid rgb(202, 202, 202);
-  color: rgb(30, 30, 30);
+  color: rgb(58, 56, 56);
 
   font-size: 16px; /* важно для мобилок */
 }
@@ -38,12 +38,12 @@
 
   transition-duration: 0.2s;
 }
-.input__icon:hover{
-  color: rgb(0, 162, 255);
-}
+
 .input__icon.show{
   animation: plain 0.7s forwards;
 }
+
+
 
 @keyframes plain{
   0%{
@@ -58,6 +58,20 @@
     transform: rotate(270deg);
     color: rgb(0, 162, 255);
   }
+}
+
+@media (max-width: 768px) {
+  .chat__input{
+    padding: 0px 3px 0px 3px;
+  }
+  .chat__input textarea{
+    background: rgb(255, 255, 255);
+  }
+  .input__icon{
+    top: 25px;
+    right: 30px;
+  }
+
 }
 
 

@@ -11,7 +11,18 @@
     padding: 0 30px 30px 30px;
     height: 100%;
     min-height: 0; /* 🔥 добавь */
-    flex: 1;
+}
+
+@media (max-width: 768px){
+  .notes__content{
+    height: auto;
+  }
+  .notes__content__container {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    height: auto; /* Контейнер подстраивается под содержимое */
+  }
 }
 
 

@@ -42,7 +42,7 @@ const AddNoteModal =(props) => {
                             })
 
                             handleClick()
-                        }}>Add</button>
+                        }}>X</button>
                     </div>
                     <div><textarea onChange={(e) => setNote({ ...note, text: e.target.value })} placeholder='Введите текст' value={note.text}/></div>
                 </div>

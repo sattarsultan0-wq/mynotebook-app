@@ -49,3 +49,14 @@
     background-color: rgba(201, 201, 201, 0.767);
     border-radius: 50%;
 }
+
+@media (max-width: 768px) { 
+  .dashbord__header{
+    height: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .dashbord__header-left h3{
+    font-size: 18px;
+  }
+}

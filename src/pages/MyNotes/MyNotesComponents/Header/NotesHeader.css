@@ -72,3 +72,19 @@
     background-position: 200% 50%;
   }
 }
+
+@media(max-width: 768px){
+  .notes__header__container{
+    padding: 30px 20px 10px 10px;
+    margin: 10px 0px;
+  }
+  .notes__header__nav__buttons{
+    display: none;
+  }
+  .notes__header__logo{
+    padding-left: 0px;
+  }
+  .header__userprofile-icon{
+    margin-left: 0px;
+  }
+}

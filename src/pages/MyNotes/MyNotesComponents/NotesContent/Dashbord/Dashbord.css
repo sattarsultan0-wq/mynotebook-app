@@ -23,27 +23,23 @@
 }
 
 
-@media (max-width: 768px) {
-  .notes__main {
-    height: auto !important; /* Убиваем 100vh */
-    min-height: 100vh;
-    display: block; 
-  }
-
-  .notes__content,
-  .notes__content__container {
-    height: auto !important;
-    min-height: auto !important;
-    display: flex;
-    flex-direction: column;
-    flex: none !important;
-  }
-
-  .notes__chat, 
+@media (max-width: 768px) { 
   .notes__dashbord {
-    flex: none !important;
-    height: auto !important; /* Карточка растягивается под контент */
-    min-height: 300px;       /* Чтобы пустая карточка не схлопнулась в ноль */
-    margin-bottom: 20px;     /* Отступ между карточками в колонке */
+    order: 2;
+    flex: none;          /* Отключаем растяжение flex-элемента */
+    height: 500px;       /* Строго фиксированная высота */
+    max-width: 600px; 
+    margin-bottom: 10px;
+    overflow-y: auto;    /* Включает вертикальный скролл, если контент не влезает */
+    display: flex;
+    flex-direction: column;    /* Отступ между карточками в колонке */
+  }
+  .dashbord__content{
+    padding: 5px;
+  }
+  .dashbord__content,
+  .dashbord__content-container {
+    flex: 1;
+    min-height: 0;
   }
 }

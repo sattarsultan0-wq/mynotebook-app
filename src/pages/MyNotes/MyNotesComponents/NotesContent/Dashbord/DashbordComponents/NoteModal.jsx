@@ -51,7 +51,7 @@ const NoteModal =(props) => {
                                 text: text
                             }
                             onEdit(note, false)
-                        }}>Save</button>
+                        }}></button>
                     </div>
                     <textarea value={text} onChange={(e) => setText(e.target.value)}/>
                 </div>

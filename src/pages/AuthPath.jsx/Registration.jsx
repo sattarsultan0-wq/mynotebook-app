@@ -31,7 +31,7 @@ const Registration = (props) => {
 
     return(
         <div className={select ? "registration__card" : "registration__card active"}>
-            <h1 className="registration__title">Регистрация</h1>
+            <h2 className="registration__title">Регистрация</h2>
 
             <div className="registration__input-group">
                 <input

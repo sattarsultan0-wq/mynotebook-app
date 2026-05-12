@@ -36,7 +36,9 @@ const Login = (props) => {
 
     return(
         <div className={select ? "auth__card" : "auth__card hidden"} ref={(el) => (cardsRef.current[0] = el)}>
-            <h1 className="auth__title">Добро пожаловать!</h1>
+            <div className='auth__title'>
+              <h2>Добро пожаловать!</h2>
+            </div>
 
             <div className="auth__input-group">
                 <input

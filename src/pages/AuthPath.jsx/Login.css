@@ -1,5 +1,5 @@
 .auth__card {
-  width: 400px;
+  width: 600px;
   height: 100%;
   background: rgb(8, 8, 8);
   padding: 30px;
@@ -9,7 +9,7 @@
     justify-content: center;
 
     
-    transition: all 1s ease;
+    transition: all 0.8s linear;
     transform: translateY(100%);
     visibility: visible;
   
@@ -22,13 +22,17 @@
     opacity: 0;
     visibility: hidden;
 }
-
-.auth__title {
+.auth__title{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.auth__title h2{
   text-align: left;
   font-size: 40px;
-  margin-bottom: 40px;
   line-height: 160%;
 }
+
 
 .auth__input-group {
   position: relative;
@@ -90,10 +94,6 @@
   justify-content: center;
 }
 
-.auth__button:hover {
-  background: #e1e1e1;
-}
-
 .auth__switch {
   text-align: center;
   margin-top: 20px;
@@ -106,9 +106,7 @@
   cursor: pointer;
   margin-left: 5px;
 }
-.auth__switch span:hover {
-    border-bottom: 1px solid #4ea1ff;
-}
+
 
 .auth__input:-webkit-autofill,
 .auth__input:-webkit-autofill:hover,
@@ -123,4 +121,18 @@
     border-bottom: 2px solid #444;
     outline: none;
     transition: background-color 5000s ease-in-out 0s;
+}
+
+
+@media(max-width: 768px){
+  .auth__card{
+    width: 400px;
+  }
+  .auth__title h2{
+    font-size: 26px;
+  }
+  .auth__button:active{
+    background-color: rgb(76, 0, 255);
+    color: white;
+  }
 }

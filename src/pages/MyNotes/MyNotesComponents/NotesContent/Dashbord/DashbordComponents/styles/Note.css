@@ -36,7 +36,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 130%;
-    color: rgb(37, 36, 36);
+    color: rgb(71, 70, 70);
 
     overflow: hidden;
     display: -webkit-box;
@@ -44,18 +44,12 @@
     -webkit-box-orient: vertical;
 
 }
-.dashbord__note:hover{
-    background-color: rgb(241, 241, 241);
-}
 
-.note__icon{
-
-    color: #5d00ff;
+.note__icon{color: #5d00ff;
     transform: scale(2);
 }
 
 .note__delete-container{
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,6 +63,13 @@
     transform: scale(1.4);
     color: rgb(45, 45, 45);
 }
-.note__delete-container:hover{
+
+@media (max-width: 768px) { 
+  .note__content h3{
+    font-size: 16px;
+  }
+  .note__delete-container:active{
     background-color: rgb(183, 183, 183);
+}
+
 }

@@ -3,6 +3,7 @@
 	margin: 0;
 	border: 0;
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 }
 *,*:before,*:after{
 	-moz-box-sizing: border-box;
@@ -51,6 +52,40 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+
+@media (hover: hover) {
+
+  .auth__button:hover {
+    background: #e1e1e1;
+  }
+
+  .auth__switch span:hover {
+    border-bottom: 1px solid #4ea1ff;
+  }
+
+  .dashbord__content__container__btn-add-notes:hover{
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(224, 224, 224);
+}
+
+.dashbord__note:hover{
+    background-color: rgb(241, 241, 241);
+}
+.note__delete-container:hover{
+    background-color: rgb(183, 183, 183);
+}
+
+.input__icon:hover{
+  color: rgb(0, 162, 255);
+}
+
+
+}
+
+/* Эффект нажатия для телефона */
+.auth__button:active {
+  transform: scale(0.98);
+}
 
 
 

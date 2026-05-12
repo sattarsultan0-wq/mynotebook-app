@@ -1,5 +1,5 @@
 .registration__card {
-  width: 400px;
+  width: 600px;
   height: 100%;
   background: rgb(8, 8, 8);
   padding: 30px;
@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: center;
     
-    transition: all 1s ease;
+    transition: all 0.8s linear;
     transform: translateY(100%);
     opacity: 0;
     visibility: hidden;
@@ -102,9 +102,7 @@
   transition: 0.3s;
 }
 
-.registration__button:hover {
-  background: #e1e1e1;
-}
+
 
 .registration__switch {
   text-align: center;
@@ -118,9 +116,7 @@
   cursor: pointer;
   margin-left: 5px;
 }
-.registration__switch span:hover{
-    border-bottom: 1px solid #4ea1ff;
-}
+
 
 
 .registration__input:-webkit-autofill,
@@ -131,4 +127,17 @@
     -webkit-text-fill-color: white !important;
     caret-color: white;
     transition: background-color 5000s ease-in-out 0s;
+}
+
+@media(max-width: 768px){
+  .registration__card{
+    width: 400px;
+  }
+  .registration__title{
+    font-size: 26px;
+  }
+  .registration__button:active{
+    background-color: rgb(76, 0, 255);
+    color: white;
+  }
 }

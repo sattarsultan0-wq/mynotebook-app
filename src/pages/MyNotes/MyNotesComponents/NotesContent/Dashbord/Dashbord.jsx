@@ -76,6 +76,7 @@ const Dashbord = () => {
     setIsOpen(true)
   }
 const onEdit = (note, value) => {
+  setIsOpen(value)
   fetch(`${URL}/${note.id}`, {
     method: "PATCH",
     headers: {
@@ -88,7 +89,6 @@ const onEdit = (note, value) => {
       setNotes(prev =>
         prev.map(n => n.id === savedNote.id ? savedNote : n)
       )
-      setIsOpen(value)
     })
 }
 

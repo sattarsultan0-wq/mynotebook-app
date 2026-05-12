@@ -25,3 +25,11 @@
   visibility: hidden;
 }
 
+@media (max-width: 768px){
+ 
+  .notes__main{
+    display: block;
+    height: 100%;
+  }
+}
+

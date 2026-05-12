@@ -22,3 +22,13 @@
 .dashbord__allnotes__container::-webkit-scrollbar-thumb:hover {
   background: #a7a7a7;
 }
+
+@media (max-width: 768px) { 
+  .dashbord__allnotes__container{
+    margin-top: 10px;
+    padding: 0px 5px 0px 5px;
+  }
+  .dashbord__allnotes__container::-webkit-scrollbar {
+    width: 2px;
+  }
+}
