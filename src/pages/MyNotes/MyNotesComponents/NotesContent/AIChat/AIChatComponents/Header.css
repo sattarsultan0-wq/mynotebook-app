@@ -1,11 +1,10 @@
 .chat__header{
-    flex-shrink: 0;
+  flex: 1;
     border-bottom: 1px solid rgba(206, 206, 206, 0.728);
-    padding: 20px;
 }
 
 @media (max-width: 768px) {
   .chat__header{
-    display: none;
+    display: block;
   }
 }

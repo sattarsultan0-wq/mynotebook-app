@@ -1,5 +1,4 @@
 import {useState} from 'react'
-import Header from './MyNotesComponents/Header/NotesHeader';
 import NotesContent from './MyNotesComponents/NotesContent/NotesContent'
 import './MyNotes.css'
 import { useEffect } from 'react';
@@ -16,7 +15,6 @@ const MyNotes = () => {
   return(
     <div className='notes__main'>
       <div className={preloader ? 'notes__main-preloader' : 'notes__main-preloader hidden'}></div>
-      <Header />
       <NotesContent />
     </div>
   )

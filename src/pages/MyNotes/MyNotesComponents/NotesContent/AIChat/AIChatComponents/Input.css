@@ -1,6 +1,6 @@
 .chat__input {
   position: relative;
-    flex-shrink: 0;
+  flex: 1;
   width: 100%;
   box-sizing: border-box;
 
@@ -22,9 +22,10 @@
   resize: none;
   border-radius: 25px;
 
-  background: rgb(255, 255, 255);
-  border: 1px solid rgb(202, 202, 202);
-  color: rgb(58, 56, 56);
+  background: rgb(34, 34, 34);
+  border: 1px solid rgba(119, 0, 255, 0.572);
+  box-shadow: 0px 0px 30px rgb(83, 19, 172);
+  color: rgb(206, 206, 206);
 
   font-size: 16px; /* важно для мобилок */
 }
@@ -34,7 +35,7 @@
   right: 50px;
   transform: scale(2);
   cursor: pointer;
-  color: black;
+  color: rgb(255, 255, 255);
 
   transition-duration: 0.2s;
 }
@@ -62,10 +63,10 @@
 
 @media (max-width: 768px) {
   .chat__input{
-    padding: 0px 3px 0px 3px;
+    padding: 0px 8px 0px 8px;
   }
   .chat__input textarea{
-    background: rgb(255, 255, 255);
+    background: rgb(13, 13, 13);
   }
   .input__icon{
     top: 25px;

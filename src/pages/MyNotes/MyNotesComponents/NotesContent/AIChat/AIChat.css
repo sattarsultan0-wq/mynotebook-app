@@ -1,11 +1,9 @@
 .notes__chat {
   position: relative;
-  flex: 1;
-   min-height: 0; /* 🔥 критично */
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #FFFFFF;
+  background-color: #141414;
   border: 1px solid rgb(222, 222, 222);
   border-radius: 20px;
   overflow: hidden;
@@ -21,15 +19,12 @@
 
   .notes__chat {
     order: 1;
-    flex: none;          /* Отключаем растяжение flex-элемента */
-    height: 600px;       /* Строго фиксированная высота */
-    max-width: 600px; 
     margin-bottom: 10px;
     overflow-y: auto;    /* Включает вертикальный скролл, если контент не влезает */
     display: flex;
     flex-direction: column;
     
-    background-color: transparent;
+    background-color: black;
     border: none;
     border-radius: 0px;
   }
