@@ -59,11 +59,6 @@ const Content =(props) => {
                     </div>
                 ))}
             </div>
-            <div className={preloader ? 'chat__preloader' : 'chat__preloader hidden'}>
-                <div className='chat__preloader-container'>
-
-                </div>
-            </div>
         </div>
     )
 }

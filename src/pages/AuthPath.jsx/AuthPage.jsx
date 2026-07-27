@@ -17,8 +17,9 @@ const[authPreloader, setAuthPreloader] = useState(false)
 const toggle = () => setSelect(!select)
 const navigate = useNavigate()
 
-const URL_REGISTER = "https://mnb-server.onrender.com/register";
-const URL_LOGIN = "https://mnb-server.onrender.com/login";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+const URL_REGISTER = `${API_BASE_URL}/register`;
+const URL_LOGIN = `${API_BASE_URL}/login`;
 
 const registerUser = () => {
   const login = registration.login

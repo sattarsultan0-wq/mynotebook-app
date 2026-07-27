@@ -11,9 +11,10 @@ const AIChat =() => {
     const[preloader,  setPreloader] = useState(true)
     const[isMenuOpen, setIsMenuOpen] = useState(false)
     const[isProfileOpen, setIsProfileOpen] = useState(false)
+    const[activeChatId, setActiveChatId] = useState(null)
     const navigate = useNavigate()
 
-    const URL = "https://mnb-server.onrender.com/message"
+    const API_BASE_URL = import.meta.env.VITE_API_URL
 
     const handleProfileAction = () => {
         setIsProfileOpen(false)
@@ -26,7 +27,10 @@ const AIChat =() => {
         navigate('/auth')
     }
 
-    const userMessage = (el) => {
+    const userMessage = async (el) => {
+    const trimmedInput = el.trim()
+    if (!trimmedInput) return
+
     setPreloader(false)
     setInputPlain(true)
     setTimeout(() => setInputPlain(false), 700)
@@ -34,7 +38,7 @@ const AIChat =() => {
     const user_message = {
         id: `user-${Date.now()}`,
         role: "user",
-        message: el
+        message: trimmedInput
     };
 
     setChat((prev) => [...prev, user_message])
@@ -47,15 +51,48 @@ const AIChat =() => {
 
     setChat((prev) => [...prev, assistant_message])
 
-    fetch(URL, {
+    let chatId = activeChatId
+
+    if (!chatId) {
+        try {
+            const chatResponse = await fetch(`${API_BASE_URL}/chats`, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${user_token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ title: 'Новый чат' })
+            })
+
+            if (!chatResponse.ok) {
+                throw new Error('Не удалось создать чат')
+            }
+
+            const createdChat = await chatResponse.json()
+            chatId = createdChat.id
+            setActiveChatId(chatId)
+        } catch (error) {
+            console.error('Ошибка создания чата:', error)
+            return
+        }
+    }
+
+    fetch(`${API_BASE_URL}/chats/${chatId}/message`, {
         method: "POST",
         headers: {
             'Authorization': `Bearer ${user_token}`,
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ role: "user", message: el })
+        body: JSON.stringify({ message: trimmedInput })
     })
-    .then((res) => res.json())
+    .then(async (res) => {
+        if (!res.ok) {
+            const errorData = await res.json().catch(() => ({ error: 'Ошибка сервера' }))
+            throw new Error(errorData.error || 'Ошибка сервера')
+        }
+
+        return res.json()
+    })
     .then((data) => {
         const aiResponseText = typeof data === 'string' ? data : data.message || '';
 
@@ -80,7 +117,14 @@ const AIChat =() => {
 
         streamChunk()
     })
-    .catch(err => console.error("Ошибка API:", err));
+    .catch(err => {
+        console.error("Ошибка API:", err)
+        setChat((prev) => prev.map((msg) =>
+            msg.id === assistant_message.id
+                ? { ...msg, message: err.message || 'Не удалось получить ответ от ИИ.' }
+                : msg
+        ))
+    });
 }
 
 

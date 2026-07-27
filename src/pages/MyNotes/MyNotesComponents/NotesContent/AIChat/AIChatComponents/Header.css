@@ -4,8 +4,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 20px;
-  background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(32, 32, 32, 0.9));
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: transparent;
   backdrop-filter: blur(16px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.22);
   z-index: 4;
@@ -147,6 +146,8 @@
 @media (max-width: 768px) {
   .chat__header {
     padding: 12px 14px;
+    box-shadow: none;
+    margin-bottom: 8px;
   }
 
   .chat__header-title {

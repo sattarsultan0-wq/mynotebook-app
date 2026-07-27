@@ -16,7 +16,8 @@ const Dashbord = () => {
   const toggle = () => setToggleAddNote(!toggleAddNote)
 
 
-  const URL = "https://mnb-server.onrender.com/notes"
+  const API_BASE_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://mnb-server.onrender.com')
+  const URL = `${API_BASE_URL}/notes`
 
   useEffect(() => {
     const USER_TOKEN = localStorage.getItem('token')

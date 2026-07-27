@@ -4,6 +4,8 @@
   height: 100%;
   min-height: 0;
   padding: 20px 22px 26px;
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto;
 }
 
 .chat__container {
@@ -52,7 +54,7 @@
   background: rgba(255, 255, 255, 0.08);
   color: #ececec;
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 2;
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -133,26 +135,41 @@
   max-width: 720px;
 }
 
+.chat__preloader-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .chat__preloader-logo {
   width: 56px;
   height: 56px;
   object-fit: contain;
-  animation: spinLogo 2.2s linear infinite;
+  animation: spinLogo 1.6s linear infinite;
 }
 
-.chat__preloader-text {
+.chat__preloader-words {
+  position: relative;
+  min-width: 140px;
+  height: 28px;
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
-.chat__preloader-anim {
+.chat__preloader-word {
+  position: absolute;
+  left: 0;
   font-size: 20px;
   font-weight: 700;
   color: #8c6dff;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  animation: pulseText 1.2s ease-in-out infinite;
+  animation: wordSwitch 2s ease-in-out infinite;
+}
+
+.chat__preloader-word--second {
+  animation-delay: 1s;
+  opacity: 0;
 }
 
 .chat__preloader-container h3{
@@ -180,15 +197,30 @@
   to { transform: rotate(360deg); }
 }
 
-@keyframes pulseText {
-  0%, 100% { opacity: 0.7; transform: translateY(0); }
-  50% { opacity: 1; transform: translateY(-2px); }
+@keyframes wordSwitch {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  10%, 45% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  55%, 90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
 }
 
 
 @media (max-width: 768px) {
   .chat__content{
     padding: 5px;
+    width: min(760px, calc(100% - 5px));
   }
   .message{
     padding: 10px;
@@ -200,6 +232,7 @@
   }
   .message__wrapper.model .message{
     background-color: transparent;
+    border: none;
   }
 
   .chat__content::-webkit-scrollbar {
